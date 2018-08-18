@@ -1,0 +1,13 @@
+---
+platform: linux
+image_resource:
+    type: docker-image
+    source: {repository: busybox}
+
+
+inputs:
+- name: task-script
+
+run:
+    path: ./task-script/task_show_uname.sh
+

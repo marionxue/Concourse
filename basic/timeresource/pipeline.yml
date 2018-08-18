@@ -1,0 +1,23 @@
+jobs:
+- name: thirdpipeline
+  public: true
+  serial: true
+  plan:
+  - get: concoursedemo
+  - get: timeresource
+    trigger: true
+  - task: sayhelloworld
+    file: concoursedemo/basic/hello/task_hello_world.yml
+
+resources:
+- name: concoursedemo
+  type: git
+  source:
+     uri: https://gogs.21vtech.com/xue.long/concoursedemo.git
+     branch: master
+- name: timeresource
+  type: time
+  source:
+     interval: 2m
+
+

@@ -1,0 +1,46 @@
+resource_type:
+- name: kubernetes
+  type: docker-image
+  source:
+    repository: zlabjp/kubernetes-resource
+    tag: "1.9"
+resource:
+- name: git-demo
+  type: git
+  source:
+    uri: https://gogs.21vtech.com/xue.long/git-demo.git
+    branch: master
+- name: docker-demo
+  type: docker-image
+  source:
+    repository: 10.200.200.90:443/devops/bluemixiaasmail
+    username: {{harbor_username}}
+    password: {{harbor_password}}
+  insecure_registries:
+  - 10.200.200.90:443
+- name: kubernetes
+  type: kubernetes
+  source:
+    kubeconfig: {{config}}
+
+
+jobs:
+- name: "Docker-build"
+  public: true
+  plan:
+    - get: git-demo
+      trigger: true
+    - put: docker-demo
+      build: git-demo
+- name: "Deploy-pods"
+  public: true
+  plan:
+    - get: docker-demo
+      trigger: true
+      passed:
+        - "Docker-build"
+    - get: git-demo
+      trigger: true
+    - put: kubernetes
+      params:
+        kubectl: apply -f git-demo/deploy

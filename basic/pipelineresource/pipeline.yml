@@ -1,0 +1,14 @@
+jobs:
+- name: secondpipeline
+  public: true
+  plan:
+  - get: concoursedemo
+  - task: gettaskfilefromgitrepo
+    file: concoursedemo/basic/task-hello-world/task_hello_world.yml
+
+resources:
+- name: concoursedemo
+  type: git
+  source:
+    uri: https://gogs.21vtech.com/xue.long/concoursedemo.git
+    branch: master

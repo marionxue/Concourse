@@ -1,0 +1,124 @@
+---
+resources:
+- name: concoursedemo
+  type: git
+  source:
+    uri: https://gogs.21vtech.com/xue.long/concoursedemo.git
+    branch: master
+- name: pushdemo
+  type: git
+  source:
+    uri: https://github.com/marionxue/pushdemobyconcourse.git
+    branch: master
+    username: marionxue
+    password: admin123
+
+    # private_key: |
+    #   -----BEGIN RSA PRIVATE KEY-----
+    #   MIIJKQIBAAKCAgEAnr9TILi0Jcd7qxpeCa1cN1/CrJekTmE1eMvo372i1FxUxrWW
+    #   5NyrgIpHd2mhJUMqMpyjcBYwRmuiJEB3NOtC6EMaeQjqBIiyyk6icpWFfN7CDqzA
+    #   esZ1jknLCYigWYcGvxqr5AS/nIDrip/Ocsa+GhI0kLgEfdbMmcDs4t+5VYMuRKip
+    #   XKS39eB+l7cm+a/FyMDBSAsmOxvhOoSg2hYIvqCKhcMFYMTUWEwHfr4KGJtERaqj
+    #   OyI501VYrRbPT2QcbNP2QDLBkaD+kGmOWTmuWNTkVkeGLthW2gBDr37OaJAMt3Vp
+    #   Llz4jtfE6/q4d/NweQvbkgfwHq/G8cDibdNz8TTAkDNquWJXjFXTrNKQIPNk++oR
+    #   Vfh1P16YjJty7isqtPB3vlPEAh3jVosLStisZnn34P2NtBLp+C/kG385YEB1vMlu
+    #   3C73V8fTsArdFx5oy5Jzy4xlQALipK4QeOrgDwrZ5PajJEdkgaE59k7kUfkB0+bQ
+    #   Y8ena0PFzeWBtSPY3911vWEgMtvHVPFscgj/Yqy8dWV4bFcK/DG15/iye4WlxOTF
+    #   ySw5UAdKgV6mEctlLGGPZbeFUFu0yBIHMob69ACzHDkZ2tmDlHZ2hq0P6z/Vbvdk
+    #   eSFE/5GinhEkzKf/0IucL+EALbFh0AzCZ5sb9PoPN+zqdI/4eDiCDRD9cl0CAwEA
+    #   AQKCAgAVhi+JQkH61V9pRbv2Z/EW+P72U+FNV1TeuhcrLxVC4foEr150TY9bcGRc
+    #   RpA48zBniGGIsxl8kt97Ntpy7Gs3/tE6FAFW+An18E+KZcehtLpvLvEyNHKABnVn
+    #   J4VGXk6F3uHrmtE4MSq+swhU+6mO82T5Mlo5jcRUHJqB8H+6nnzJhmzgSN1Ak13W
+    #   yFiahkC1BZ2vXQOkBBW3z3/X0iEBZ9cgZ970zftUtYpWnwHTcEoDgC19uRhKFUpe
+    #   vbcCNrq77sl2zur8Ce46OnW4l1+SX9tN74i8FU1BZcPHqdPmzZFL1rmaNbTl+U+U
+    #   B3y3luRrJTZySG1AW+kHonWRGpifpzI3xVc6QlNPxwq0kXR8OGLM4V1EZO4/QslB
+    #   ac/vyWUeiIfT9srFnCZannnVXmG2tJ0iAd2hOJjMJsIETr5yLdajdlbn0oxhRU/S
+    #   kgL536T0BTNbC/1GGgnBXnadS6Z/kFFy8dC/bbIqLOm7oXvMM68ZCohuPoFa+Jiq
+    #   DU9XH0bVat1uQZ/Vmswwo64qDscUnb7lloLPQTwhRVybh7KvsHVgFdBbn6UOCIcf
+    #   TMUU8tsrCMvPkzOkwrwwuJyihq2jJtTZBvaMSeSkwHaE+tjsIiedP6Zl9ejblcVE
+    #   dof1iKMficEtsubON4H+vqbnmPIfY1U2Y42J0afUXG3Lz1lGgQKCAQEAyvKkxGGY
+    #   bgqFc7VQqOtad4U2CGbHdXFFgoL9+lfH4A06aFcR3A4S4q6vVQ5nzKtGpcrMGiaA
+    #   UAB7OHyAN0gqUjLWLDKFFu/WYO2MPTthwS8Is/9QaFCEQfWObjZ53yjHDt9ORNj+
+    #   42Oxe6o5KyyMwcM/wjvf88YwkL1NBskw80Z+CcBLbJ00s7vG4pLl+OPbLnGEUEHG
+    #   lCMPdplthfKp8RWBEf1ic+q39dTvlxWxkesIhBqzXa6h5fDVDEiXI17b7bhQT5/H
+    #   Zs6O+8yPFOGCcUm2SDC3ydS2f/HCcika2nkt6B/H2aONHbgjNIiD3Aw5NGy4DaCP
+    #   yvWEgH/aVfABzQKCAQEAyD7EUsYScn+OOC/jKKI/3IdoME/Bq+gGgYzhOUu71VD9
+    #   6Zus6SQIRNQ8IaKpE4VxdxGjHsLI30KLjoimJifr/2h9B00aQ6QPjmTYydeHFBVp
+    #   1/ZJ9BNKUnmi1TMjrwNrDPJ8U4jFRRLZ9+4aRiH4gusCuU8tX2Li8oogeYCOXtdG
+    #   Lb4OPoyUaGlCWcnh4z9T9VjY16pLh3YOONa75PGA8FHKYu6eYSr+sv0muiC4CYjz
+    #   hiOdzzr/LEYu7DzunD6GsEdgOmLDDqd2YUZrBePhUGz4X9BRCKZ2Kp19xBPVvV+u
+    #   FFckjg9UDNQwxdsZgkgh8hlf/K0hlJ82qg9xj0ni0QKCAQEAo8l9tku5dB2jpEVR
+    #   anI+2bS1bcRc9uhKm9DR3mdXlPe4Cpsye7EUBsPKFtAAb4pPAuCPJg+qgGZTC7xW
+    #   0ca4+Qu0E4lWJbO8BQ/RnV0+QGWQFYxYvUc15fGiWEo4wyQqulL33NJvqt47T72K
+    #   U9CpbHsCCuS9kgSCD13nOzHGAqACeiYp+OdKsD88fIDnfp2Nt4a/rPHYrJc7FJEw
+    #   dejow/uB5h3jhf+JJaoLDpjgbQ4NGmheF54nZOafWkF/UHlu7wRQNGKTz+GmPYrS
+    #   cpyo5HsD1HEU8ptsCgf30KBh3q3roal8ZaX77l88clo2aLGovSl8xOqvAbJxlC8a
+    #   6z4+hQKCAQBCmk3mUic0miSNn6/ohf7DtO38k6qRKP1w/ZCz4/K3wtaRaswaR3fQ
+    #   nN7bOSUPbyUMO3uL8bGqQJH2eJD6w/CE5RYg5Y5EzT63V+ebSuqMzYqE4FA8tGXW
+    #   BMsaKoZF4dcrWUPs7OLgVKLXCgUHKqljshMX27P1tAhUL4kZoJ66ANRAxqQqPcvm
+    #   5ovBHZraYOfmBQUqxmOUzLlyQkoAnisKw8mTGlbnbsuEcRr+cX+E/F4zUYldsfvJ
+    #   mBZnUOT0Zv+ZhkQFZ3AFYcHIHQnfzanVfEkoZTtuqx9GkVeRbh97e2WFMm7gKU0F
+    #   b1ZBmNxlLuTLh5Ebk+JFcqdV7QkSZbrhAoIBAQCsTB7d6xmUzONIn101iAr8jxb0
+    #   FHwBsKTjNmT/LMly/GSZ4H1Uzo/tshUXx9dSkG48oxN/KwVfIOClvaESR1QJ5JMO
+    #   LRcZBACzXRRZIyFEbS02BuKMvY/CBAz14jfNv5tGZ2e0havX6DpGvW2cgGTtYihT
+    #   eqpg9y3FIJ63v8b3roV0cnHQ63jDFIRA7xRZZBu4xemyBgLnih109J5shXKtqzrw
+    #   dzOS5CwAV5tdDHrgp5q9pYwvRUP4wOLVX550LYOy//agINwaWC1OGUIuBkapI9hB
+    #   /jWCfA7ndsLDDXytni7RVo2tfyeZHxd5UP8UFifj2Aqf8BRrQPxxac9FJ9tD
+    #   -----END RSA PRIVATE KEY-----
+
+jobs:
+- name: Concourse-Magic
+  public: true
+  serial: true
+  plan:
+  - get: concoursedemo
+  - get: pushdemo
+  - task: create-files
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      inputs: 
+      - name: concoursedemo
+      outputs:
+      - name: some-files
+
+
+      run:
+        path: concoursedemo/basic/task-output-to-inputs/create-file.sh
+  - task: shwo-some-files
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+
+      inputs: 
+      - name: concoursedemo
+      - name: some-files
+      run:
+        path: concoursedemo/basic/task-output-to-inputs/show-file.sh
+
+  - task: pushtopushdemo
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: starkandwayne/concourse}
+      
+      inputs:
+      - name: concoursedemo
+      - name: pushdemo
+      outputs:
+      - name: push-pushdemo
+      run:
+        path: concoursedemo/basic/task-output-to-inputs/pushfiletogit.sh
+  - put: pushdemo
+    params: 
+      repository: push-pushdemo
+
+
+
+
+
